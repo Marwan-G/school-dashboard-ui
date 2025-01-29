@@ -2,11 +2,11 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
     return (
       <div className="h-screen flex">
         {/* Left sidebar */}
-        <div className="flex-[1] bg-gray-100 p-4">
-          Sidebar content
+        <div className="w-[14%] md:w-[8%] lg:w-[16%] xl:w-[14%] bg-red-100 p-4">
+         test
         </div>
         {/* Right main content */}
-        <div className="flex-[5] p-4">
+        <div className="w-[86] md:w-[92%] lg:w-[84%] xl:w-[80%] bg-blue-200 p-4">
         {children}
         </div>
       </div>
