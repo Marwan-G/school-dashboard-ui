@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Menu from "@/components/Menu";
 
 export default function DashboardLayout({ children }: { children: ReactNode }) {
     return (
@@ -10,9 +11,10 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
           <Image src="/logo.png"  alt="log" width={32} height={32}/>
           <span className="hidden lg:block">
             LibianSchoool
-            </span>
+          </span>
+          
          </Link>
-         
+         <Menu />
         </div>
         {/* Right main content */}
         <div className="w-[86] md:w-[92%] lg:w-[84%] xl:w-[80%] bg-blue-200 p-4">
