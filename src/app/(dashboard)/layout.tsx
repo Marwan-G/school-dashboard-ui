@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Menu from "@/components/Menu";
+import Navbar from "@/components/Navbar";
 
 export default function DashboardLayout({ children }: { children: ReactNode }) {
     return (
@@ -16,7 +17,8 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
          <Menu />
         </div>
         {/* Right main content */}
-        <div className="w-[86] md:w-[92%] lg:w-[84%] xl:w-[80%] bg-blue-200 p-4">
+        <div className="w-[86] md:w-[92%] lg:w-[84%] xl:w-[86%] bg-[#7F8FA] overflow-scroll">
+        <Navbar />
         {children}
         </div>
       </div>
