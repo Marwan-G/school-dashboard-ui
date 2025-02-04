@@ -12,7 +12,6 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
           <span className="hidden lg:block">
             LibianSchoool
           </span>
-          
          </Link>
          <Menu />
         </div>
