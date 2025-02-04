@@ -1,11 +1,20 @@
 import React from 'react'
 
-const page = () => {
+const AdminPage = () => {
   return (
-    <div>
-      <p>Hi, Im Admin page in the folder      /app/admin/page.tsx</p>
+    <div className="p-4 flex gap-4 flex-col md:flex-row">
+      {/* LEFT    */}
+      <div className='w-full lg:w-2/3'>
+      left
+      </div> 
+        {/* RIGH    */}
+        <div className='w-full lg:w-1/3'>
+        right
+        </div>
+    
     </div>
+
   )
 }
 
-export default page
+export default AdminPage
