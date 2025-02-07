@@ -14,11 +14,11 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
             LibianSchoool
           </span>
          </Link>
-         <Menu />
+         {/* <Menu /> */}
         </div>
         {/* Right main content */}
         <div className="w-[86] md:w-[92%] lg:w-[84%] xl:w-[86%] bg-[#7F8FA] overflow-scroll">
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
         </div>
       </div>
