@@ -17,7 +17,7 @@ const AdminPage = () => {
           <UserCard type="staff" />
         </div>
         {/* MIDDLE CHARTS */}
-        <div className="flex gap-4 flax-col lg:flex-row">
+        <div className="flex gap-4 flex-col lg:flex-row">
           {/* COUNT CHART */}
           <div className="w-full lg:w-1/3 h-[450px]">
             <CountChart />
@@ -33,7 +33,7 @@ const AdminPage = () => {
         </div>
       </div>
       {/* RIGH  ChART  */}
-      <div className="w-full flex-col lg:w-1/3 flex  gap-8">
+      <div className="w-full flex-col lg:w-1/3 flex  gap-8 ">
         <EventCalendar />      
       </div>
    
