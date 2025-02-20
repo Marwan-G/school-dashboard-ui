@@ -13,7 +13,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
           className="flex items-center justify-center lg:justify-start gap-2"
         >
           <Image src="/logo.png" alt="log" width={32} height={32} />
-          <span className="hidden lg:block">LibianSchoool</span>
+          <span className="hidden lg:block font-bold">LibianSchoool</span>
         </Link>
        <Menu /> 
       </div>
