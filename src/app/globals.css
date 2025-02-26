@@ -1,8 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Just one-line of CSS 
+— no more @tailwind directives,
+ just add @import "tailwindcss" and start building.
+@tailwind base;  --> NO
+@tailwind components;  ----> No
+@tailwind utilities;  ----> NO */ 
 
-.react-calendar {
+@import "tailwindcss";
+
+/* .react-calendar {
     width: 100% !important;
     border: none !important;
     font-family: "Inter", sans-serif !important;
@@ -13,4 +18,4 @@
 }
 .react-calendar__navigation__label__labelText{
     font-weight: 600;
-}
+} */
