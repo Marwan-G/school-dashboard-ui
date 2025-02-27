@@ -85,8 +85,7 @@ function classNames(...classes) {
 export default function MonthView( {selectedOption , onChangeView}) {
   return (
     <div className="lg:flex lg:h-full lg:flex-col">
-      <header className="flex items-center justify-between border-b border-gray-200 px-6 py-4 lg:flex-none">
-        <div className="flex items-center">
+      <header className="flex items-center justify-between">
           <Menu as="div" className="relative ml-6 md:hidden">
             <MenuButton className="-mx-2 flex items-center rounded-full border border-transparent p-2 text-gray-400 hover:text-gray-500">
               <span className="sr-only">Open menu</span>
@@ -153,7 +152,6 @@ export default function MonthView( {selectedOption , onChangeView}) {
               </div>
             </MenuItems>
           </Menu>
-        </div>
       </header>
       <div className="ring-1 shadow-sm ring-black/5 lg:flex lg:flex-auto lg:flex-col">
         <div className="grid grid-cols-7 gap-px border-b border-gray-300 bg-gray-200 text-center text-xs/6 font-semibold text-gray-700 lg:flex-none">

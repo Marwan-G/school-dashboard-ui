@@ -17,7 +17,7 @@ const CalendarHeader = ({selectedOption,onChangeView}: CalendarHeaderProps) => {
     console.log('selectedOption:', selectedOption);
 
   return (
-    <header className="flex items-center justify-between border-b border-gray-200 px-6 py-4 lg:flex-none">
+    <header className="flex items-center justify-between mb-2">
     <h1 className="text-base font-semibold text-gray-900">
       <time dateTime="2022-01">January 2022</time>
     </h1>
