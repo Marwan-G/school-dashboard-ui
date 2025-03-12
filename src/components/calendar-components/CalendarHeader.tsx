@@ -14,7 +14,6 @@ interface CalendarHeaderProps {
     onChangeView: (option: string) => void;
   }
 const CalendarHeader = ({selectedOption,onChangeView}: CalendarHeaderProps) => {
-    console.log('selectedOption:', selectedOption);
 
   return (
     <header className="flex items-center justify-between mb-2">

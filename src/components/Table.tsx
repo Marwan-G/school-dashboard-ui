@@ -6,11 +6,11 @@ const Table = ({
   columns: { header: string; accessor: string; ClassName?: string }[];
 }) => {
   return (
-    <table className="w-fll mt-4">
+    <table className="w-fll mt-4 border-1">
       <thead className="">
-        <tr className="text-left text-gray-500 text-sm">
+        <tr className="text-left text-gray-500 text-sm ">
           {columns.map((col) => (
-            <th key={col.accessor}> {col.header}</th>
+            <th  key={col.accessor}> {col.header}</th>
           ))}
         </tr>
       </thead>
