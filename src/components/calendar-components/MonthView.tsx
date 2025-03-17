@@ -82,7 +82,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function MonthView( {selectedOption , onChangeView}) {
+export default function MonthView( ) {
   return (
     <div className="lg:flex lg:h-full lg:flex-col">
       <header className="flex items-center justify-between">
