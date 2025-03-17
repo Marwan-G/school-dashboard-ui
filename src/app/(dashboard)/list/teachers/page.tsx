@@ -17,6 +17,7 @@ export type Teacher = {
   address: string;
 };
 
+
 const TeacherListPage = () => {
   const columns = [
     {

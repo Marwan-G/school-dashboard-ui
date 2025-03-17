@@ -8,7 +8,6 @@ const Table = ({
 }: {
   columns: { header: string; accessor: string; ClassName?: string }[];
   rendRow: (item:Teacher) => React.ReactNode; // Define rendRow function properly
-  // data: Teacher[]; // Define data prop
   data: any[]
 }) => {
   return (
