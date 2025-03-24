@@ -14,7 +14,7 @@ const page = () => {
       {/* LEFT    */}
       <div className="w-full  lg:w-2/3  bg-white p-4  rounded-md">
         {/* <h1 className="text-xl font-semibold">schedule (A4)</h1> */}
-        <CalendarHeader selectedOption={view} onChangeView={setView} />
+        <CalendarHeader  onChangeView={setView} />
         {view === "Month view" ? <MonthView /> : <DayView />}
       </div>
       {/* RIGHT CHART  */}
