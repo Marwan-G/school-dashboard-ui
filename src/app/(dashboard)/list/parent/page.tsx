@@ -5,7 +5,7 @@ import Link from "next/link";
 import { role, parentsData } from "@/lib/data";
 import Image from "next/image";
 import React from "react";
-export type parentsData = {
+export type Parents = {
     id: number,
     name: string,
     students: string[],
@@ -45,7 +45,7 @@ const ParentListPage = () => {
     },
   ];
 
-  const rendRow = (item: parentsData) => {
+  const rendRow = (item: Parents) => {
     return (
       <tr key={item.id}>
         <td>
