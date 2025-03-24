@@ -1,42 +1,49 @@
 import Pagination from "@/components/Pagination";
 import TableSearch from "@/components/TableSearch";
 import Table from "@/components/Table";
-import Link from "next/link";
-import { role, teachersData } from "@/lib/data";
-import Image from "next/image";
 import React from "react";
-export type Teacher = {
+import Link from "next/link";
+import Image from "next/image";
+import { role, studentsData } from "@/lib/data";
+
+export type Student = {
   id: number;
-  teacherId: string;
+  studentId: string;
   name: string;
   email?: string;
-  photo: string;
+  photo?: string;
   phone: string;
-  subjects: string[];
-  classes: string[];
+  grade: string;
+  class: string;
   address: string;
 };
 
 
-const TeacherListPage = () => {
+const StudentListPage = () => {
+    
   const columns = [
     {
       header: "Info",
       accessor: "info",
     },
     {
-      header: "Teacher ID",
-      accessor: "teacherId",
+      header: "Student ID",
+      accessor: "studentId",
       className: "hidden md:table-cell",
     },
     {
-      header: "Subjects",
-      accessor: "subjects",
+        header: "Name",
+        accessor: "name",
+        className: "hidden md:table-cell",
+      },
+    {
+      header: "Grade",
+      accessor: "grade",
       className: "hidden md:table-cell",
     },
     {
-      header: "Classes",
-      accessor: "subjects",
+      header: "Class",
+      accessor: "class",
       className: "hidden md:table-cell",
     },
     {
@@ -55,26 +62,25 @@ const TeacherListPage = () => {
     },
   ];
 
-  const rendRow = (item: Teacher) => {
+  const rendRow = (item: Student) => {
     return (
       <tr key={item.id}>
         <td>
           <Image
-            src={item.photo}
-            alt=""
+            src={item.photo || "/default-avatar.png"}
+            alt={`${item.name}'s photo`}  // Improve accessibility with meaningful alt text
             width={40}
             height={40}
             className="md:hidden xl:block w-10 h-10 rounded-full object-cover "
           />
           <div className="flex flex-co">
-            <h3 className="font-semibold">{item.name}</h3>
-            <p className="text-xs text-gray-500">{item?.email}</p>
+            <span className="hidden md:table-cell">{item.name}</span>
+            <h3 className="font-semibold">{item.class}</h3>
           </div>
         </td>
-        <td>{item.teacherId}</td>
+        <td className="hidden md:table-cell">{item.studentId}</td>
+        <td className="hidden md:table-cell">{item.grade}</td>
 
-        <td className="hidden md:table-cell">{item.subjects.join(",")}</td>
-        <td className="hidden md:table-cell">{item.classes.join(",")}</td>
         <td className="hidden md:table-cell">{item.phone}</td>
         <td className="hidden md:table-cell">{item.address}</td>
         <td>
@@ -108,15 +114,16 @@ const TeacherListPage = () => {
             <button className="w-8 h-8  flex item-center justify-center rounded-full bg-yellow-200">
               <Image src="/sort.png" alt="" width={14} height={14} />
             </button>
-             { role === "admin" &&  <button className="w-8 h-8  flex item-center justify-center rounded-full bg-yellow-200">
+            { role === "admin" &&  <button className="w-8 h-8  flex item-center justify-center rounded-full bg-yellow-200">
               <Image src="/plus.png" alt="" width={14} height={14} />
             </button> }
+           
           </div>
         </div>
       </div>
       {/* LIST */}
       <div className="">
-        <Table columns={columns} rendRow={rendRow} data={teachersData} />
+        <Table columns={columns} rendRow={rendRow} data={studentsData} />
       </div>
       {/* PAGINATION */}
       <div className="">
@@ -126,4 +133,4 @@ const TeacherListPage = () => {
   );
 };
 
-export default TeacherListPage;
+export default StudentListPage;
