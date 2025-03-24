@@ -8,11 +8,7 @@ import {
 } from "@heroicons/react/20/solid";
 import { useEffect, useRef } from "react";
 
-interface CalendarHeaderProps {
-    selectedOption: string;
-    onChangeView: (option: string) => void;
-  }
-const CalendarHeader = ({selectedOption,onChangeView}: CalendarHeaderProps) => {
+const CalendarHeader = ({onChangeView}: {onChangeView: (option:string)=>void}) => {
 
   return (
     <header className="flex items-center justify-between mb-2">
