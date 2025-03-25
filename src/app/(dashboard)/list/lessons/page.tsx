@@ -2,14 +2,15 @@ import Pagination from "@/components/Pagination";
 import TableSearch from "@/components/TableSearch";
 import Table from "@/components/Table";
 import Link from "next/link";
-import { role, subjectsData } from "@/lib/data";
+import { role, lessonsData } from "@/lib/data";
 import Image from "next/image";
 import React from "react";
 
-export type Subjects = {
+export type Lessons = {
     id: number,
-    name: string,
-    teachers: string[],
+    subject: string,
+    class: string,
+    teacher: string,
   
 };
 
@@ -17,8 +18,13 @@ const SubjectsListPage = () => {
   const columns = [
     {
       header: "Subject Name",
-      accessor: "info",
+      accessor: "name",
     },
+    {
+        header: "Class",
+        accessor: "class",
+
+      },
     {
         header: "Teachers",
         accessor: "teachers",
@@ -32,16 +38,18 @@ const SubjectsListPage = () => {
     },
   ];
 
-  const rendRow = (item: Subjects) => {
+  const rendRow = (item: Lessons) => {
     return (
       <tr key={item.id} className="border-b border-gray-200 even:bg-slate-50 tx-sm hover:bg-purple-50">
           <td className="flex items-center gap-4 p-4">
         
-            <h3 className="font-semibold">{item.name}</h3>
+            <h3 className="font-semibold">{item.subject}</h3>
        
         </td>
 
-        <td className="hidden md:table-cell">{item.teachers.join(" , ")}</td>
+        <td>{item.class}</td>
+        <td className="hidden md:table-cell">{item.teacher}</td>
+
        
         <td>
           <div className="flex items-center gap-2">
@@ -82,7 +90,7 @@ const SubjectsListPage = () => {
       </div>
       {/* LIST */}
       <div className="">
-        <Table columns={columns} rendRow={rendRow} data={subjectsData} />
+        <Table columns={columns} rendRow={rendRow} data={lessonsData} />
       </div>
       {/* PAGINATION */}
       <div className="">
